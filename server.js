@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import routes from './routes/routes.js';
 import helmet from "helmet";
-// import connect from './src/db/connection.js';
+import connect from './src/db/connection.js';
 const app = express();
 dotenv.config({path: "./config/.env.dev"});
 const PORT = process.env.PORT;

@@ -1,7 +1,7 @@
 import {Sequelize} from 'sequelize';
 
 
- const connect = new Sequelize("postgres://rootdnh:mypass@localhost:5432/blog");
+const connect = new Sequelize("postgres://rootdnh:mypass@localhost:5432/blog");
 
 try {
   await connect.authenticate();

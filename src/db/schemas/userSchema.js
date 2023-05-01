@@ -1,4 +1,4 @@
-import connection from '../connection';
+import connection from '../connection.js';
 import { DataTypes } from 'sequelize';
 
 export const UserSchema = connection.define("users", {
@@ -6,11 +6,14 @@ export const UserSchema = connection.define("users", {
     type: DataTypes.INTEGER,
     allowNull: false,
     autoIncrement: true,
-    prmaryKey: true
-  },
+    primaryKey: true
+  },  
   name: {
     type: DataTypes.STRING,
     allowNull: false,
   }
 })
+
+UserSchema.sync()
+
 
