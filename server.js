@@ -9,7 +9,7 @@ const app = express();
 dotenv.config({path: "./config/.env.dev"});
 const PORT = process.env.PORT;
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use("*", cors());
 app.use(helmet());
 
